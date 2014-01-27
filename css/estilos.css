@@ -1,0 +1,371 @@
+/*@font-face {
+    font-family: 'Open Sans';
+    src: url('fuentes/OpenSans-Regular-webfont.eot');
+    src: url('fuentes/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fuentes/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fuentes/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fuentes/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+@font-face {
+	font-family: 'iconosPuls2014';
+	src:url('../fuentes/iconosPuls2014.eot');
+	src:url('../fuentes/iconosPuls2014.eot?#iefix') format('embedded-opentype'),
+		url('../fuentes/iconosPuls2014.woff') format('woff'),
+		url('../fuentes/iconosPuls2014.ttf') format('truetype'),
+		url('../fuentes/iconosPuls2014.svg#iconosPuls2014') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'iconosPuls2014';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-adjust:before {
+	content: "\e600";
+}
+
+.icon-flechaAbajo:before, .icon-flechaArriba:before
+{
+	font-size: 1.5em;
+	position: relative;
+	top: 0.2em;
+}
+
+.icon-flechaAbajo:before {
+	content: "\e601";
+	color: #DD4F24;
+}
+.icon-flechaArriba:before {
+	content: "\e602";
+	color: #258932;
+}
+.icon-estrella:before {
+	content: "\e603";
+	color: #FFBE2C;
+	font-size: 1.2em;
+	margin-right: 0.4em;
+	position: relative;
+	top: 0.15em;
+}
+.icon-lapiz:before {
+	content: "\e604";
+	margin-right: 0.8em;
+}
+
+a
+{
+	color: #22BCE0;
+}
+
+body
+{
+	background: #EEE;
+	font-family: "Open Sans", Arial;
+	font-size: 16px;
+}
+
+footer
+{
+	background: #22BCE0;
+	color: rgba(255,255,255,0.7);
+	text-align: center;
+	padding: 1.5em;
+}
+
+footer p:first-child
+{
+	margin-bottom: 0;
+}
+
+footer p:last-child
+{
+	margin-top: 0;
+}
+
+footer p:last-child:after
+{
+	content: " -";
+}
+
+footer p:last-child:before
+{
+	content: "- ";
+}
+
+header
+{
+	background: #343B54;
+	color: white;
+	overflow: hidden;
+	padding: 0.5em;
+	position: relative;
+}
+
+header figure
+{
+	float: left;
+}
+
+header h1
+{
+	font-size: 1.2em;
+	font-weight: normal;
+	margin: 0.2em 70px 0 0;
+}
+
+header #avatar
+{
+	margin: 0.5em 0.5em 0 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+header #avatar img
+{
+	border-radius: 50%;
+	width: 55px;
+}
+
+header #logo
+{
+	border-right: 1px solid white;
+	margin-right: 0.5em;
+}
+
+header #logo img
+{
+	padding-right: 0.5em;
+	margin-right: 0.5em;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	-webkit-transition: 1s;
+	width: 52px;
+}
+
+header #logo img:hover
+{
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
+
+nav
+{
+	background: #6B82B1; /* #80BCA3 */
+	box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+	padding: 0 6em 0 0;
+	position: relative;
+}
+
+nav ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+nav ul li
+{
+	display: inline-block;
+	margin: 0 1em 0 0;
+}
+
+nav ul li a
+{
+	color: white;
+	display: block;
+	padding: 0.5em;
+	-ms-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-o-transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+
+nav ul li a:hover
+{
+	background: #343854;
+}
+
+nav ul #publicar_nav
+{
+	position: absolute;
+	right: 0;
+	top: -0.3em;
+}
+
+nav ul #publicar_nav a
+{
+	background: #22BCE0;
+	border-radius: 5px;
+	box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+	font-style: italic;
+	padding: 0.8em 0.5em 0.8em 2.5em;
+	text-decoration: none;
+	text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+}
+
+nav ul #publicar_nav a:before
+{
+	left: 0.5em;
+	position: absolute;
+	top:0.7em;
+}
+
+nav ul #publicar_nav a:hover:before
+{
+	/* Aunque sólo queremos aumentar el tamaño de fuente al elemento :before, tenemos que poner antes el estado :hover, sino no funciona. */
+	font-size: 20px;
+}
+
+aside
+{
+	display: none;
+}
+
+#contenido
+{
+	margin: 1em;
+}
+
+#contenido .item
+{
+	background: white;
+	border-bottom: 3px solid #22BCE0;
+	margin-bottom: 3em;
+	min-height: 128px;
+	position: relative;
+}
+
+#contenido .item .autor_item
+{
+ 	color: #AAA;
+}
+
+#contenido .item .datos_item
+{
+	margin: 1em 1em 0 0;
+	text-align: right;
+}
+
+#contenido .item .datos_item .fecha_item
+{
+	color: #AAA;
+}
+
+#contenido .item .datos_item .tag_item
+{
+	background: #F4502A;
+	border-radius: 0.5em;
+	color: white;
+	float: left;
+	display: inline-block;
+	padding: 0.2em 0.5em;
+	text-decoration: none;
+}
+
+#contenido .item .imagen_item
+{
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+#contenido .item .imagen_item img
+{
+	width: 96px;
+}
+
+#contenido .item .titulo_item
+{
+	font-size: 1.2em;
+	font-style: italic;
+	padding: 1em 1em 0 0;
+}
+
+#contenido .item .titulo_item a
+{
+	color: #444;
+	text-decoration: none;
+}
+
+#contenido .item .votacion
+{
+	background: white;
+	border-radius: 0 0 0.5em 0.5em;
+	left: 5%;
+	margin-top: 3px;
+	padding: 0.2em 0.5em;
+	position: absolute;
+	top: 100%;
+	width: 90%;
+}
+
+#contenido .item .votacion a
+{
+	text-decoration: none;
+}
+
+#contenido .item .votacion .comentarios_item,
+#contenido .item .votacion .guardar_item
+{
+	float: right;
+}
+
+#contenido .item .votacion .comentarios_item
+{
+	position: relative;
+	top: 0.15em;
+}
+
+@media screen and (min-width: 800px){
+	/* Ponemos los artículos en dos columnas */
+	#contenido
+	{
+		overflow: hidden;
+	}
+
+	#contenido .item
+	{
+		float: left;
+/* Cuando flotamos tenemos que poner en el contenedor padre overflow: hidden; */
+		width: 49%;
+	}
+
+	#contenido .item:nth-child(odd)
+	{
+		/* Separación entre columnas*/
+		margin-right: 2%;
+	}
+}
+
+@media screen and (min-width: 1000px){
+
+	aside{
+		display: block;
+		float: right;
+		margin: 1em;
+		width: 20%;
+	}
+
+	aside video
+	{
+		width: 100%;
+	}
+}
