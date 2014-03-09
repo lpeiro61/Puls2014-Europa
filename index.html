@@ -5,7 +5,6 @@
 		<title>Puls2014</title>
 		<meta name="description" content="Página para el curso de Diseño Web Online - Mejorando.la" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/estilos.css" />
 	</head>
@@ -32,14 +31,21 @@
 				</li>
 			</ul>
 		</nav>
+		<form action="" id="formulario" class="formulario">
+			<input type="text" placeholder="Título" id="titulo" required />
+			<input type="url" placeholder="Link" id="link" required />
+			<input type="submit" value="Agregar" />
+		</form>
 		<aside>
+			<div id="geo"></div>
 			<video width="320" height="240" controls>
 				<source src="videos/lecturas.m4v" type="video/mp4" />
 				<source src="videos/lecturas.ogg" type="video/ogg" />
 				<source src="videos/lecturas.webm" type="video/webm" />
-				<!-- Tu navegador no soporta video en HTML5.<br/>
-					¡Actualízalo y vivirás mejor! -->
+							<!-- Tu navegador no soporta video en HTML5.<br/>
+								¡Actualízalo y vivirás mejor! -->
 			</video>
+
 		</aside>
 		<section id="contenido">
 			<article class="item">
@@ -193,6 +199,40 @@
 			</p>
 			<p>mejorando.la 2014</p>
 		</footer>
+
+		<!-- Es script siguiente nos sirve para no poner los prefijos de los navegadores en el CSS, sólo funciona desde server. -->
+		<!-- <script src="js/prefixfree.js"></script> -->
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/formulario.js"></script>
+		<script>
+			$(function(){
+				var geo = navigator.geolocation;
+
+				function geo_exito(position){
+
+					var lat = position.coords.latitude;
+					var lon = position.coords.longitude;
+
+					var mapa = new Image();
+					mapa.src = "http://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&zoom=12&size=250x250&sensor=false";
+
+					$("#geo").append(mapa);
+
+					// obtenerGeoInformacion(lat, lon);
+				}
+
+				function geo_error(){
+					console.log("No sé dónde estás!");
+				}
+
+				geo.getCurrentPosition(geo_exito, geo_error, {
+					enableHighAccuracy: true,
+					timeout: 500,
+					maximumAge: 0
+				});
+			});
+		</script>
 
 	</body>
 </html>
